@@ -7,6 +7,7 @@
 // 完成数据相关处理
 // 生成发给EX段的控制信号
 
+
 module ID(
     input wire clk,
     input wire rst,
