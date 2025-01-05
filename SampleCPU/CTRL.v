@@ -23,6 +23,7 @@ module CTRL(
             stall = `StallBus'b0;
         end
         //todo: stallreq_for_ex, stallreq_for_bru, stallreq_for_load
+        //还没写完，加上后过不了1号测试点
         else if (stallreq_for_ex) begin
             stall = `StallBus'b001111;
         end

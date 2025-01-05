@@ -42,8 +42,6 @@ module mycpu_core(
     wire [`StallBus-1:0] stall;
     wire ex_id;
 
-    wire [71:0] id_hi_lo_bus;
-    wire [65:0] ex_hi_lo_bus;
 
     // stall
     wire stallreq_for_ex;
@@ -78,9 +76,7 @@ module mycpu_core(
         .id_load_bus     (id_load_bus     ),
         .id_save_bus     (id_save_bus     ),
         .stallreq_for_bru(stallreq_for_bru),
-        .br_bus          (br_bus          ),
-        .id_hi_lo_bus    (id_hi_lo_bus    ),
-        .ex_hi_lo_bus    (ex_hi_lo_bus    )
+        .br_bus          (br_bus          )
     );
 
     EX u_EX(
@@ -100,9 +96,7 @@ module mycpu_core(
         .data_sram_en    (data_sram_en    ),
         .data_sram_wen   (data_sram_wen   ),
         .data_sram_addr  (data_sram_addr  ),
-        .data_sram_wdata (data_sram_wdata ),
-        .id_hi_lo_bus    (id_hi_lo_bus    ),
-        .ex_hi_lo_bus    (ex_hi_lo_bus    )
+        .data_sram_wdata (data_sram_wdata )
     );
 
     MEM u_MEM(
