@@ -1,5 +1,4 @@
 `include "lib/defines.vh"
-
 module CTRL(
     input wire rst,
 
